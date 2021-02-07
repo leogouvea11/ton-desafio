@@ -21,6 +21,4 @@ app.use(routes.routes())
 
 app.use(routeNotFound())
 
-app.listen(3000, 'localhost')
-// serverless(app)
-console.log(`app is running on http://localhost:3000`)
+export const handler = serverless(app)
