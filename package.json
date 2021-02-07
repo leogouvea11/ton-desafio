@@ -2,12 +2,12 @@
   "name": "ton-desafio",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.ts",
+  "main": "src/main.ts",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node build/app.js",
+    "start": "npm run build && node build/main.js",
     "start-dev": "nodemon"
   },
   "keywords": [],
