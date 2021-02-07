@@ -21,4 +21,5 @@ app.use(routes.routes())
 
 app.use(routeNotFound())
 
+app.listen(3000, () => console.log(`Aplication is reunning on: localhost:3000`))
 export const handler = serverless(app)
