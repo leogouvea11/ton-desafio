@@ -1,4 +1,5 @@
 .terraform
+.env
 node_modules
 build
 mongo-volume

@@ -15,12 +15,14 @@ const isDatabaseConnected = () => {
 }
 
 export const getDb = async (): Promise<Db> => {
-  const MONGO_URL = 'mongodb+srv://ton-desafio:ton-desafio@cluster0.e4dli.mongodb.net/ton-desafio?retryWrites=true&w=majority'
-
-  if (!MONGO_URL) {
-    throw new Error('No MONGO_URL or MONGO_DATABASE defined')
+  if (database) {
+    return database
   }
 
+  const { MONGO_URL } = process.env
+  if (!MONGO_URL) {
+    throw new Error('No MONGO_URL defined')
+  }
   if (database && isDatabaseConnected()) {
     return database
   }
